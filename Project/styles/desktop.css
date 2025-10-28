@@ -1,0 +1,23 @@
+nav li a:hover {
+  color: #7e8aa2;
+}
+nav ul {
+  padding-left: 0;
+  flex-direction: row;
+  flex-wrap: initial;
+}
+nav ul li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  border-left: 1px solid #7e8aa2;
+}
+nav li:first-child {
+  border-left: none;
+}
+header {
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
