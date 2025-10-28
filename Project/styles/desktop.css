@@ -1,23 +1,50 @@
 nav li a:hover {
   color: #7e8aa2;
 }
+.container {
+  margin: auto;
+  max-width: 1200px;
+  min-width: 600px;
+}
 nav ul {
-  padding-left: 0;
+  padding: 0;
   flex-direction: row;
   flex-wrap: initial;
+  justify-content: center;
 }
 nav ul li {
   display: inline;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: none;
+  border-top: 1px solid #7e8aa2;;
   border-left: 1px solid #7e8aa2;
+  
 }
-nav li:first-child {
-  border-left: none;
+nav li:last-child {
+
+   border-right: 1px solid #7e8aa2;
 }
 header {
-  border-radius: 8px;
+  border-radius: 0px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  margin:0 auto;
+  justify-content: center;
+}
+.section{
+    display: flex;
+    justify-content: space-around;
+    margin:0 auto;
+    outline: solid;
+    outline-width: 1px;
+    outline-color: black;
+}
+.left-float {
+  float:left;
+
+}
+.right-float {
+  float:right;
+
 }
