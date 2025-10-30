@@ -35,10 +35,18 @@ header {
 .section{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin:0 auto;
     outline: solid;
     outline-width: 1px;
     outline-color: black;
+}
+.insidesection
+{
+   outline: solid;
+   padding: 10px;
+  outline-width: 1px;
+  outline-color: black;
 }
 .left-float {
   float:left;
