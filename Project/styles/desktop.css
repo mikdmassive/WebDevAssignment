@@ -33,26 +33,8 @@ header {
   justify-content: center;
 }
 .section{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin:0 auto;
-    outline: solid;
-    outline-width: 1px;
-    outline-color: black;
+    flex-direction: row;
 }
-.insidesection
-{
-   outline: solid;
-   padding: 10px;
-  outline-width: 1px;
-  outline-color: black;
-}
-.left-float {
-  float:left;
-
-}
-.right-float {
-  float:right;
-
+.reverseDesktopDisplay{
+  flex-direction: row-reverse;
 }
