@@ -114,10 +114,22 @@ footer {
   background-color: rgb(220, 245, 240);
 }
 
+@keyframes buttonHoverEffect {
+  from { background-color: #F28B30;width: 120px;height: 30px;}
+  to {background-color: #884a14;width: 130px;height: 32px;}
+}
 button{
   background-color: #F28B30;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
   box-shadow: 0 0 10px #242424;
-  
+  width: 120px;
+  height: 30px;
+}
+button:hover{
+  animation-name: buttonHoverEffect;
+  animation-duration: .2s;
+  background-color: #884a14;
+  width: 130px;
+  height: 32px;
 }
