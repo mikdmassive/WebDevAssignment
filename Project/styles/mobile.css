@@ -15,14 +15,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-size: 16px;
-    line-height: 1.6px;
+    line-height: 1.6;
     background-color: rgb(245, 245, 245 );
 }
 .container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto; 
-  white-space: nowrap;
-  overflow: hidden;
+ 
+  overflow: visible;
 }
 #logo-img{
     min-width: 50px;
@@ -106,6 +106,9 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow-x: auto;
+    flex-wrap: wrap-reverse;
+  
 }
 #beigeBack
 {
@@ -122,4 +125,10 @@ button{
   border-radius: 4px;
   box-shadow: 0 0 10px #242424;
   
+}
+.container p{
+  white-space: normal;
+  display: block;
+  word-break: break-word;
+  flex-wrap: wrap;
 }
