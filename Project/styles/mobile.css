@@ -57,6 +57,8 @@ nav ul li a {
   padding: 8px 0;
 }
 footer {
+  background-color: #0A437C;
+  color: #fff;
   border-top: 1px solid #ccc;
   margin: 20px 10px 10px 0;
   font-size: 0.8em;
