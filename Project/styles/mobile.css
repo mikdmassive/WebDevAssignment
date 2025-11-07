@@ -15,14 +15,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-size: 16px;
-    line-height: 1.6px;
+    line-height: 1.6;
     background-color: rgb(245, 245, 245 );
 }
 .container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto; 
-  white-space: nowrap;
-  overflow: hidden;
+ 
+  overflow: visible;
 }
 #logo-img{
     min-width: 50px;
@@ -57,6 +57,8 @@ nav ul li a {
   padding: 8px 0;
 }
 footer {
+  background-color: #0A437C;
+  color: #fff;
   border-top: 1px solid #ccc;
   margin: 20px 10px 10px 0;
   font-size: 0.8em;
@@ -104,6 +106,9 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow-x: auto;
+    flex-wrap: wrap-reverse;
+  
 }
 #beigeBack
 {
@@ -120,4 +125,10 @@ button{
   border-radius: 4px;
   box-shadow: 0 0 10px #242424;
   
+}
+.container p{
+  white-space: normal;
+  display: block;
+  word-break: break-word;
+  flex-wrap: wrap;
 }
