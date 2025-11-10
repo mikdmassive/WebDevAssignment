@@ -128,7 +128,6 @@ button{
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
   box-shadow: 0 0 10px #242424;
-<<<<<<< HEAD
   width: 120px;
   height: 30px;
 }
@@ -138,13 +137,4 @@ button:hover{
   background-color: #884a14;
   width: 130px;
   height: 32px;
-=======
-  
-}
-.container p{
-  white-space: normal;
-  display: block;
-  word-break: break-word;
-  flex-wrap: wrap;
->>>>>>> 35d77c617047efb1c053281815234f74f678a47b
 }
