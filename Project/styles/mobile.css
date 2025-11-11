@@ -91,9 +91,7 @@ footer {
 .section:first-of-type{
   border-top: 1px solid rgb(220,220,220);
 }
-.section:last-of-type{
-  border-bottom: none;
-}
+
 .insidesection
 {
     margin: 8px;
