@@ -139,12 +139,12 @@ button:hover{
   height: 35px;
 }
 @keyframes imgSliderHoverEffect {
-  from {width: 700px;}
-  to {width: 750px;}
+  from {width: 85%;  margin: 7.5%;}
+  to {width: 90%;  margin: 5%;}
 }
 @keyframes imgSliderUnhoverEffect {
-    from {width: 750px}
-  to {width: 700px;}
+    from {width: 90%;  margin: 5%;}
+  to {width: 85%;  margin: 7.5%;}
 
 }
 
@@ -152,12 +152,14 @@ button:hover{
 {
     animation-name: imgSliderUnhoverEffect;
   animation-duration: .2s;
-  width: 700px;
+  width: 85%;
+  margin: 7.5%;
 
 }
 #imgSlider:hover{
   animation-name: imgSliderHoverEffect;
   animation-duration: .2s;
-  width: 750px;
+  width: 90%;
+  margin: 5%;
 
 }
