@@ -70,6 +70,7 @@ footer {
   height: auto;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
+  overflow: hidden;
 }
 .sectionHolder{
   display: flex;
@@ -106,8 +107,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow-x: auto;
-    flex-wrap: wrap-reverse;
+    
   
 }
 #beigeBack
@@ -121,7 +121,7 @@ footer {
 
 @keyframes buttonHoverEffect {
   from { background-color: #F28B30;width: 120px;height: 30px;}
-  to {background-color: #884a14;width: 130px;height: 32px;}
+  to {background-color: #884a14;width: 130px;height: 35px;}
 }
 button{
   background-color: #F28B30;
@@ -129,12 +129,35 @@ button{
   border-radius: 4px;
   box-shadow: 0 0 10px #242424;
   width: 120px;
-  height: 30px;
+  height: 33px;
 }
 button:hover{
   animation-name: buttonHoverEffect;
   animation-duration: .2s;
   background-color: #884a14;
   width: 130px;
-  height: 32px;
+  height: 35px;
+}
+@keyframes imgSliderHoverEffect {
+  from {width: 700px;}
+  to {width: 750px;}
+}
+@keyframes imgSliderUnhoverEffect {
+    from {width: 750px}
+  to {width: 700px;}
+
+}
+
+#imgSlider
+{
+    animation-name: imgSliderUnhoverEffect;
+  animation-duration: .2s;
+  width: 700px;
+
+}
+#imgSlider:hover{
+  animation-name: imgSliderHoverEffect;
+  animation-duration: .2s;
+  width: 750px;
+
 }
