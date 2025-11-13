@@ -56,6 +56,10 @@ nav ul li a {
   color: #fff;
   padding: 8px 0;
 }
+nav ul li :hover{
+  padding-left: 10px;
+  border-left: 1px solid #F28B30;
+}
 footer {
   background-color: #0A437C;
   color: #fff;

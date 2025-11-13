@@ -21,6 +21,9 @@ nav ul li {
   border-left: 1px solid #7e8aa2;
   
 }
+nav ul li :hover{
+  border-bottom: 1px solid #F28B30;
+}
 nav li:last-child {
 
    border-right: 1px solid #7e8aa2;
