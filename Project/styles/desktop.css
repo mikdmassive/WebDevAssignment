@@ -22,6 +22,8 @@ nav ul li {
   
 }
 nav ul li :hover{
+  border: none;
+  padding-left: 0px;
   border-bottom: 1px solid #F28B30;
 }
 nav li:last-child {
