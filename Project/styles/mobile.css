@@ -23,6 +23,7 @@ body{
   margin: 0 auto; 
  
   overflow: visible;
+  
 }
 #logo-img{
     min-width: 50px;
@@ -37,6 +38,7 @@ body{
 header,#Logo{
   background-color: #0A437C;
 }
+
 nav ul {
   list-style: none;
   padding-left: 0;
