@@ -179,3 +179,19 @@ button:hover{
 .RomanNumeralsList li p{
   font-weight: normal;
 }
+
+table {
+  width: 100%;
+  max-width: 600px;
+  min-width: 300px;
+}
+th,
+td {
+  padding: 10px 4px;
+  text-align: left;
+}
+th {
+  text-transform: uppercase;
+  border-bottom: 4px solid #000;
+  background-color: #fff;
+}
