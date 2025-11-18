@@ -1,4 +1,4 @@
-let images = ["images/cantorbuildingoutside.jpg","images/StayBright.jpg","images/TallBuilding.jpg"]
+let images = ["/static/images/cantorbuildingoutside.jpg","/static/images/StayBright.jpg","/static/images/TallBuilding.jpg"]
 let altTags = ["The outside of Cantor College","A building that says \"Stay Bright\" on the side","Tall red brick building in the sun"]
 
 let imgSlider = document.getElementById("imgSlider")
