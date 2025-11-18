@@ -3,28 +3,28 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <link rel="stylesheet" href="styles/mobile.css" />
+        <link rel="stylesheet" href="{{url_for('static', filename = 'styles/mobile.css')}}" />
         <link
             rel="stylesheet"
-            href="styles/desktop.css"
+            href="{{url_for('static', filename = 'styles/desktop.css')}}"
             media="only screen and (min-width : 920px)"
         />
-        <title>Cantor College | Learning Resources</title>
+        <title>Cantor College | Courses</title>
     </head>
     <body>
         <div class = "container">
             <header>
                 <div id = "Logo">
-                     <p><img src="images/logo.png" alt="Logo" style="width:120px" id="logo-img"></p>
+                     <p><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Logo" style="width:120px" id="logo-img"></p>
                     
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="AboutUs.html">About Us</a></li>
-                        <li><a href="Facilities.html">Facilities</a></li>
-                        <li><a href="LearningResources.html">Learning Resources</a></li>
-                        <li><a href="Courses.html">Courses</a></li>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="{{url_for('AboutUs')}}">About Us</a></li>
+                        <li><a href="{{url_for('Facilities')}}">Facilities</a></li>
+                        <li><a href="{{url_for('LearningResources')}}">Learning Resources</a></li>
+                        <li><a href="{{url_for('Courses')}}">Courses</a></li>
                         <li><a href="#.html">Information</a></li>
                         <li><a href="#.html">Contact Us</a></li>
                     </ul>
@@ -32,7 +32,7 @@
             </header>
             <main>
                 <div class = "section reverseDesktopDisplay">
-                     <p><img src="images/cantoroverbalcony.jpg" alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings" style="min-width:400px" class="resize-img"></p>
+                     <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}" alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings" style="min-width:400px" class="resize-img"></p>
                      <div class = "insidesection">
                         <h2>Computing Courses</h2>
                         <p>The College offers a range of courses to suit applicants with varying backgrounds and educational abilities. At undergraduate level, there are single BSc Honours Degree courses in Computing, Computer Networks, Software Engineering and Cyber Security with Forensics amongst others.</p>
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="section">
-                     <p><img src="images/cantoroverbalcony.jpg" alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings" style="min-width:400px" class="resize-img"></p>
+                     <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}" alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings" style="min-width:400px" class="resize-img"></p>
                     <div class = "insidesection">
                          
                         <h2>Design Courses</h2>
