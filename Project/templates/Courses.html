@@ -6,7 +6,7 @@
 <div class="section reverseDesktopDisplay">
     <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}"
             alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings"
-            style="min-width:400px" class="resize-img"></p>
+            class="resize-img DesktopImages"></p>
     <div class="insidesection">
         <h2>Computing Courses</h2>
         <p>The College offers a range of courses to suit applicants with varying backgrounds and educational abilities.
@@ -26,7 +26,7 @@
 <div class="section">
     <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}"
             alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings"
-            style="min-width:400px" class="resize-img"></p>
+            class="resize-img DesktopImages"></p>
     <div class="insidesection">
 
         <h2>Design Courses</h2>
@@ -44,9 +44,47 @@
         </p>
     </div>
 </div>
-<div class="section">
-    <table>
-
-    </table>
+<div class="aligncenter" id = 'beigeBack'>
+    <h1>Computing Courses</h1>
+    {% for member in data %}
+        {% if member.CourseSubject == 'Computing' %}
+            <div class="insidesection">
+                <h3>{{ member.CourseTitle }}</h3>
+                <div class="CourseStats">
+                    <p>{{ member.CourseType }}</p>
+                    <p>{{ member.UcasPoints }} UCAS Points</p>
+                    <p>{{ member.CourseAwardName }}</p>
+                </div>
+                <p>{{ member.CourseSummary }}</p>
+                <div class="CourseStats2">
+                    <p>UCAS:{{ member.UcasCode }}</p>
+                    <p>{{ member.YearOfEntry }}</p>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>
+<div class="aligncenter" id = 'lightblueBack'>
+    <h1>Art & Design Courses</h1>
+    {% for member in data %}
+        {% if member.CourseSubject == 'Art and design' %}
+            <div class="insidesection">
+                <h3>{{ member.CourseTitle }}</h3>
+                <div class="CourseStats">
+                    <p>{{ member.CourseType }}</p>
+                    <p>{{ member.UcasPoints }} UCAS Points</p>
+                    <p>{{ member.CourseAwardName }}</p>
+                </div>
+                <p>{{ member.CourseSummary }}</p>
+                   <div class="CourseStats2">
+                    <p>UCAS:{{ member.UcasCode }}</p>
+                    <p>{{ member.YearOfEntry }}</p>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+
 {% endblock %}

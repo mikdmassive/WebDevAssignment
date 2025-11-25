@@ -3,14 +3,10 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/mobile.css') }}" />
-        <link
-            rel="stylesheet"
-            href="{{url_for('static', filename = 'styles/desktop.css') }}"
-            media="only screen and (min-width : 920px)"
-        />
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/style.css') }}" />
+      
         <title>{% block title %}Cantor College{% endblock %}</title>
-        <script src="{{url_for('static', filename = 'js/imageSlider.js')}}" defer></script>
+        {% block java %}{% endblock %}
     </head>
     <body>
         <div class = "container">

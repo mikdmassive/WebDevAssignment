@@ -1,4 +1,4 @@
-﻿CourseTitle,CourseType,CourseSummary,CourseAwardName,UcasCode,UcasPoints,YearOfEntry,ModeOfAttendance,StudyLength,HasFoundationYear,CourseSubject,NoLongerRecruiting
+CourseTitle,CourseType,CourseSummary,CourseAwardName,UcasCode,UcasPoints,YearOfEntry,ModeOfAttendance,StudyLength,HasFoundationYear,CourseSubject,NoLongerRecruiting
 Computing,Undergraduate,"Learn how to code, configure and integrate applications, databases and systems architectures which form the pillars of modern technology in today&rsquo;s world.",BSc (Honours),G504,112,2026/27,Full-time,3 / 4 Years,false,Computing,false
 Computer Networks,Undergraduate,"This course includes general computing skills in programming, cyber security, information systems, management and professionalism in a technical environment.",BSc (Honours),G420,112,2026/27,Full-time,3 / 4 Years,false,Computing,false
 Cyber Security with Forensics,Undergraduate,"Prepare for a career in cyber security by designing security systems, identifying evidence of cybercrimes and acting as detectives in a digital world.",BSc (Honours),F4G4,112,2026/27,Full-time,3 / 4 Years,false,Computing,false

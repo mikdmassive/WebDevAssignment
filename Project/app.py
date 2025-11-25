@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-
+from config import db_config 
+import mysql.connector
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,7 +13,23 @@ def AboutUs():
 
 @app.route('/Courses')
 def Courses():
-    return render_template('Courses.html')
+    conn = mysql.connector.connect(**db_config)
+
+    cursor = conn.cursor(dictionary=True)
+    
+    # Execute SQL query
+    cursor.execute("SELECT * FROM courses")
+    
+    data = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    #convert html values
+    for row in data:
+        row['CourseSummary'] = row['CourseSummary'].replace('&ndash;', '-').replace('&nbsp;', ' ').replace('&rsquo;', '’') 
+
+    return render_template('Courses.html', data=data)
 
 @app.route('/Facilities')
 def Facilities():
