@@ -1,9 +1,9 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables from .env
+load_dotenv()  # Loading env
 
-# Create a database configuration dictionary
+# config dictionary 
 db_config = {
     'host': os.getenv('DB_HOST'),
     'user': os.getenv('DB_USER'),
