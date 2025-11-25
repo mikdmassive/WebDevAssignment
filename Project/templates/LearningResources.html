@@ -1,85 +1,107 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-       <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <link rel="stylesheet" href="{{url_for('static', filename = 'styles/mobile.css')}}" />
-        <link
-            rel="stylesheet"
-            href="{{url_for('static', filename = 'styles/desktop.css')}}"
-            media="only screen and (min-width : 920px)"
-        />
-        <title>Cantor College | Learning Resources</title>
-    </head>
-    <body>
-        <div class = "container">
-            <header>
-                <div id = "Logo">
-                     <p><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Logo" style="width:120px" id="logo-img"></p>
-                    
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="{{url_for('home')}}">Home</a></li>
-                        <li><a href="{{url_for('AboutUs')}}">About Us</a></li>
-                        <li><a href="{{url_for('Facilities')}}">Facilities</a></li>
-                        <li><a href="{{url_for('LearningResources')}}">Learning Resources</a></li>
-                        <li><a href="{{url_for('Courses')}}">Courses</a></li>
-                        <li><a href="#.html">Information</a></li>
-                        <li><a href="#.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <div class = "section reverseDesktopDisplay" id = "beigeBack">
-                      <p><img src="{{url_for('static', filename = 'images/roadtocantor.jpg')}}" alt="Road towards cantor libary building" class="resize-img"></p>
-                    <div class = "insidesection" style="max-width: 500px;">
-                        <h2>Introduction</h2>
-                        <div class="LongWords">
-                            <p>All students and staff of the College are entitled to register as members of the Library and Resource Centre and to use the facilities for the purpose of their course of study or College employment. </p>
-                            <p>Membership may also be extended to other individuals and to persons nominated from other organisations:  a fee is usually charged.  Access to the Library and Resource Centre for study purposes may be made available to non-members by arrangement. Details are available in the <i>External Services</i> leaflet.</p>
-                            <p>Use of facilities implies acceptance of the Library and Resource Centre rules printed below.  These are designed to protect the interests of all users of Library and Resource Centre and to ensure that the College operates within the law and can carry out its functions efficiently and effectively.  The Library and Resource Centre rules apply in principle to all sites, including workstation rooms and site libraries, notwithstanding some variations in practice in the site libraries.  Admission to the Library and Resource Centre is conditional upon observation of the rules and the staff are empowered to enforce them. </p>
-                            <p>Breaches of the rules may be dealt with by specific Library and Resource Centre Disciplinary Action <em style="color: #F28B30;">(see below)</em>, including the withdrawal of some access, and if appropriate by invoking the College’s <i>Regulations for Students</i>, in the case of students, or in the case of staff through the appropriate College procedures as set out in the <i>Staff Handbook.</i></p>
-                        </div>
-                    </div>
-                </div>
-                <div class = "section" id = "lightblueBack">
-                    
-                    <div class = "insidesection">
-                         <h2>Rules</h2>
-                         <div class = "ListInSection">
-                            <h3>A. Access:</h3>
-                            <ul class="RomanNumeralsList">
-                                <li><p>The use of Library and Resource Centre facilities is normally limited to use for the educational and other purposes of the College.</li>
-                                <li><p>All individuals wishing to become members of the Library and Resource Centre must comply with the registration procedures.  These include an undertaking to abide by Library and Resource Centre rules.</p></li>
-                                <li><p>Individuals or organisations who are not eligible for membership but have good reason to use the Library and Resource Centre  may be admitted, by arrangement, for purposes of study only. Procedures for seeking admission are outlined in the <i>External Services</i> leaflet. Non-members must sign the Visitors' Book on each visit, and may be required to produce written identification.  Study use does not include access to the College's Academic Network.</p></li>
-                                <li><p>ID cards issued by the College are not transferable from one person to another.  The person named on each card is responsible for all items borrowed on it and is liable for the cost of replacement of the card or items borrowed on it in the event of loss or damage.</p></li>
-                          
-                            </ul>
-                            <p><i>Users of the Library and Resource Centre are reminded that they must be willing to show  ID cards or other identification when requested to do so by College staff.</i></p>
-                        </div>
-                        <div class = "ListInSection">
-                            <h3>B. Use Of Facilities:</h3>
-                            <ul class="RomanNumeralsList">
-                                <li><p>The Library and Resource Centre is not responsible for loss of, or damage to, the personal belongings of its users and visitors.  Users must take reasonable precautions against theft of their belongings, and must not leave belongings unattended even for a very short period. Study tables/PCs may not be reserved by depositing clothing or private property on the adjacent seat.  Articles left unattended may be removed by staff but will be returned on request at the Reception Desk.</p></li>
-                                <li><p>All users are required to conduct themselves quietly throughout the Library and Resource Centre and conversation between users must be kept to a minimum.  No conversation is permitted in those areas designated as ‘Silent’ areas. </p></li>
-                                <li><p>Personal stereos may not be used in the Library and Resource Centre.</p></li>
-                                <li><p>Mobile phones must be turned off in all Library and Resource Centre study areas. Their use is permitted in the <i>enclosed</i> stair wells of the Main Site building.</p></li>
-                                <li><p>Users should not make use of mains electrical supplies to power their own equipment, including external storage devices,  unless the equipment has been tested and confirmed as meeting the required Health & Safety standards.  Written evidence of such compliance will be required.</p></li>
-                                <li><p>Eating and drinking are not permitted in any of the public areas of the Library and Resource Centre.</p></li>
-                                <li><p>Action will be taken against any person misusing furniture, facilities or materials.  Any such person may be required to pay for the making good damage or loss.</p></li>
-                            
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-               
-            </main>
-            <footer>
-                <p>153 Arundel St, Sheffield City Centre, Sheffield S1 2NU</p>
-                <p>Cantor College &copy; 2025</p>
-                
-            </footer>
+{% extends "base.html" %}
+
+{% block title %}Cantor College | Learning Resources{% endblock %}
+
+{% block content %}
+<div class="section reverseDesktopDisplay" id="beigeBack">
+    <p><img src="{{url_for('static', filename = 'images/roadtocantor.jpg')}}" alt="Road towards cantor libary building"
+            class="resize-img"></p>
+    <div class="insidesection" style="max-width: 500px;">
+        <h2>Introduction</h2>
+        <div class="LongWords">
+            <p>All students and staff of the College are entitled to register as members of the Library and Resource
+                Centre and to use the facilities for the purpose of their course of study or College employment. </p>
+            <p>Membership may also be extended to other individuals and to persons nominated from other organisations: a
+                fee is usually charged. Access to the Library and Resource Centre for study purposes may be made
+                available to non-members by arrangement. Details are available in the <i>External Services</i> leaflet.
+            </p>
+            <p>Use of facilities implies acceptance of the Library and Resource Centre rules printed below. These are
+                designed to protect the interests of all users of Library and Resource Centre and to ensure that the
+                College operates within the law and can carry out its functions efficiently and effectively. The Library
+                and Resource Centre rules apply in principle to all sites, including workstation rooms and site
+                libraries, notwithstanding some variations in practice in the site libraries. Admission to the Library
+                and Resource Centre is conditional upon observation of the rules and the staff are empowered to enforce
+                them. </p>
+            <p>Breaches of the rules may be dealt with by specific Library and Resource Centre Disciplinary Action <em
+                    style="color: #F28B30;">(see below)</em>, including the withdrawal of some access, and if
+                appropriate by invoking the College’s <i>Regulations for Students</i>, in the case of students, or in
+                the case of staff through the appropriate College procedures as set out in the <i>Staff Handbook.</i>
+            </p>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+<div class="section" id="lightblueBack">
+
+    <div class="insidesection">
+        <h2>Rules</h2>
+        <div class="ListInSection">
+            <h3>A. Access:</h3>
+            <ul class="RomanNumeralsList">
+                <li>
+                    <p>The use of Library and Resource Centre facilities is normally limited to use for the educational
+                        and other purposes of the College.
+                </li>
+                <li>
+                    <p>All individuals wishing to become members of the Library and Resource Centre must comply with the
+                        registration procedures. These include an undertaking to abide by Library and Resource Centre
+                        rules.</p>
+                </li>
+                <li>
+                    <p>Individuals or organisations who are not eligible for membership but have good reason to use the
+                        Library and Resource Centre may be admitted, by arrangement, for purposes of study only.
+                        Procedures for seeking admission are outlined in the <i>External Services</i> leaflet.
+                        Non-members must sign the Visitors' Book on each visit, and may be required to produce written
+                        identification. Study use does not include access to the College's Academic Network.</p>
+                </li>
+                <li>
+                    <p>ID cards issued by the College are not transferable from one person to another. The person named
+                        on each card is responsible for all items borrowed on it and is liable for the cost of
+                        replacement of the card or items borrowed on it in the event of loss or damage.</p>
+                </li>
+
+            </ul>
+            <p><i>Users of the Library and Resource Centre are reminded that they must be willing to show ID cards or
+                    other identification when requested to do so by College staff.</i></p>
+        </div>
+        <div class="ListInSection">
+            <h3>B. Use Of Facilities:</h3>
+            <ul class="RomanNumeralsList">
+                <li>
+                    <p>The Library and Resource Centre is not responsible for loss of, or damage to, the personal
+                        belongings of its users and visitors. Users must take reasonable precautions against theft of
+                        their belongings, and must not leave belongings unattended even for a very short period. Study
+                        tables/PCs may not be reserved by depositing clothing or private property on the adjacent seat.
+                        Articles left unattended may be removed by staff but will be returned on request at the
+                        Reception Desk.</p>
+                </li>
+                <li>
+                    <p>All users are required to conduct themselves quietly throughout the Library and Resource Centre
+                        and conversation between users must be kept to a minimum. No conversation is permitted in those
+                        areas designated as ‘Silent’ areas. </p>
+                </li>
+                <li>
+                    <p>Personal stereos may not be used in the Library and Resource Centre.</p>
+                </li>
+                <li>
+                    <p>Mobile phones must be turned off in all Library and Resource Centre study areas. Their use is
+                        permitted in the <i>enclosed</i> stair wells of the Main Site building.</p>
+                </li>
+                <li>
+                    <p>Users should not make use of mains electrical supplies to power their own equipment, including
+                        external storage devices, unless the equipment has been tested and confirmed as meeting the
+                        required Health & Safety standards. Written evidence of such compliance will be required.</p>
+                </li>
+                <li>
+                    <p>Eating and drinking are not permitted in any of the public areas of the Library and Resource
+                        Centre.</p>
+                </li>
+                <li>
+                    <p>Action will be taken against any person misusing furniture, facilities or materials. Any such
+                        person may be required to pay for the making good damage or loss.</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

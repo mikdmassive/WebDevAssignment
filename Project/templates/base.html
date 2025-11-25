@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/mobile.css') }}" />
+        <link
+            rel="stylesheet"
+            href="{{url_for('static', filename = 'styles/desktop.css') }}"
+            media="only screen and (min-width : 920px)"
+        />
+        <title>{% block title %}Cantor College{% endblock %}</title>
+        <script src="{{url_for('static', filename = 'js/imageSlider.js')}}" defer></script>
+    </head>
+    <body>
+        <div class = "container">
+            <header>
+                <div id = "Logo">
+                     <p><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Logo" style="width:120px" id="logo-img"></p>
+                    
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="{{url_for('AboutUs')}}">About Us</a></li>
+                        <li><a href="{{url_for('Facilities')}}">Facilities</a></li>
+                        <li><a href="{{url_for('LearningResources')}}">Learning Resources</a></li>
+                        <li><a href="{{url_for('Courses')}}">Courses</a></li>
+                        <li><a href="#.html">Information</a></li>
+                        <li><a href="#.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                {% block content %}
+                <!-- EACH PAGE CONTENT IN HERE -->
+                {% endblock %}
+            </main>
+            <footer>
+                <p>153 Arundel St, Sheffield City Centre, Sheffield S1 2NU</p>
+                <p>Cantor College &copy; 2025</p>
+               
+            </footer>
+        </div>
+    </body>
+</html>

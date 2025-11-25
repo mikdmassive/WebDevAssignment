@@ -1,86 +1,49 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/mobile.css') }}" />
-        <link
-            rel="stylesheet"
-            href="{{url_for('static', filename = 'styles/desktop.css') }}"
-            media="only screen and (min-width : 920px)"
-        />
-        <title>Cantor College | Main Menu</title>
-        <script src="{{url_for('static', filename = 'js/imageSlider.js')}}" defer></script>
-    </head>
-    <body>
-        <div class = "container">
-            <header>
-                <div id = "Logo">
-                     <p><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Logo" style="width:120px" id="logo-img"></p>
-                    
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="{{url_for('home')}}">Home</a></li>
-                        <li><a href="{{url_for('AboutUs')}}">About Us</a></li>
-                        <li><a href="{{url_for('Facilities')}}">Facilities</a></li>
-                        <li><a href="{{url_for('LearningResources')}}">Learning Resources</a></li>
-                        <li><a href="{{url_for('Courses')}}">Courses</a></li>
-                        <li><a href="#.html">Information</a></li>
-                        <li><a href="#.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <p> </p>
-                <div class = "section" id = "beigeBack">
-                    
-                    <p><img src="{{url_for('static', filename = 'images/cheesegrater.jpg')}}" alt="Car park that looks like a cheese grater"style="width:200px;" class="resize-img"></p>
-                    <div class = "insidesection">
-                        <h2>Welcome To Cantor College</h2>
-                        <p>Welcome to the Cantor College website, here you will find everything you need to know about us. <br></br>
-                        We hope you find the website inspiring and informative. <br></br>
-                        Feel free to contact us for any extra help or information!</p>
-                        <button>Contact Us</button>
-                    </div>
-                   
-                </div>
-                 <div class = "section">
-                    <div class = "insidesection"  >
-                        <h2>Facilities</h2>
-                         <p><img src="{{url_for('static', filename = 'images/ComputersAndEarphones.jpg')}}" alt="Row of computers with red earphones connected to them" style="width:200px" class="resize-img"></p>
-                        <p>Dive in to the facilities we provide for our students...</p>
-                        <br><button onclick="location.replace('/Facilities')">View Facilities</button></br>
+{% extends "base.html" %}
 
-                    </div>
-             
-                    <div class = "insidesection"  >
-                        <h2>Learning Resources</h2>
-                        <p><img src="{{url_for('static', filename = 'images/ComputersAndMagazines.jpg')}}" alt="A room with computers and magazines" style="width:200px" class="resize-img"></p>
-                        <p>View the learning resources we have to offer our pupils...</p>
-                        <br><button onclick="location.replace('/LearningResources')">View Learning Resources</button></br>
+{% block title %}Cantor College | Home Screen{% endblock %}
 
-                    </div>
-                    
-                 </div>
-                 <div class = "section reverseDesktopDisplay" id = "lightblueBack">
-                    
-                    <p><img src="{{url_for('static', filename = 'images/cantorbuildingoutside.jpg')}}" alt="The outside of Cantor College"class="resize-img"  id = "imgSlider"></p>
-                   
-                    <div class = "insidesection"  >
-                        <h2>Why Choose Cantor?</h2>
-                        <p>Take a peek into your future at Cantor College...</p>
-                        <br><button onclick="location.replace('/Courses')">View Courses</button></br>
+{% block content %}
+<p> </p>
+<div class="section" id="beigeBack">
 
-                    </div>
-                    
-                </div>
-            </main>
-            <footer>
-                <p>153 Arundel St, Sheffield City Centre, Sheffield S1 2NU</p>
-                <p>Cantor College &copy; 2025</p>
-               
-            </footer>
-        </div>
-    </body>
-</html>
+    <p><img src="{{url_for('static', filename = 'images/cheesegrater.jpg')}}"
+            alt="Car park that looks like a cheese grater" style="width:200px;" class="resize-img"></p>
+    <div class="insidesection">
+        <h2>Welcome To Cantor College</h2>
+        <p>Welcome to the Cantor College website, here you will find everything you need to know about us. <br></br>
+            We hope you find the website inspiring and informative. <br></br>
+            Feel free to contact us for any extra help or information!</p>
+        <button>Contact Us</button>
+    </div>
+
+</div>
+<div class="section">
+    <div class="insidesection">
+        <h2>Facilities</h2>
+        <p><img src="{{url_for('static', filename = 'images/ComputersAndEarphones.jpg')}}"
+                alt="Row of computers with red earphones connected to them" style="width:200px" class="resize-img"></p>
+        <p>Dive in to the facilities we provide for our students...</p>
+        <br><button onclick="location.replace('/Facilities')">View Facilities</button></br>
+
+    </div>
+
+    <div class="insidesection">
+        <h2>Learning Resources</h2>
+        <p><img src="{{url_for('static', filename = 'images/ComputersAndMagazines.jpg')}}"
+                alt="A room with computers and magazines" style="width:200px" class="resize-img"></p>
+        <p>View the learning resources we have to offer our pupils...</p>
+        <br><button onclick="location.replace('/LearningResources')">View Learning Resources</button></br>
+
+    </div>
+
+</div>
+<div class="section reverseDesktopDisplay" id="lightblueBack">
+
+    <p><img src="{{url_for('static', filename = 'images/cantorbuildingoutside.jpg')}}" alt="The outside of Cantor College" class="resize-img" id="imgSlider"></p>
+    <div class="insidesection">
+        <h2>Why Choose Cantor?</h2>
+        <p>Take a peek into your future at Cantor College...</p>
+        <br><button onclick="location.replace('/Courses')">View Courses</button></br>
+    </div>
+</div>
+{% endblock %}

@@ -1,68 +1,52 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <link rel="stylesheet" href="{{url_for('static', filename = 'styles/mobile.css')}}" />
-        <link
-            rel="stylesheet"
-            href="{{url_for('static', filename = 'styles/desktop.css')}}"
-            media="only screen and (min-width : 920px)"
-        />
-        <title>Cantor College | Courses</title>
-    </head>
-    <body>
-        <div class = "container">
-            <header>
-                <div id = "Logo">
-                     <p><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Logo" style="width:120px" id="logo-img"></p>
-                    
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="{{url_for('home')}}">Home</a></li>
-                        <li><a href="{{url_for('AboutUs')}}">About Us</a></li>
-                        <li><a href="{{url_for('Facilities')}}">Facilities</a></li>
-                        <li><a href="{{url_for('LearningResources')}}">Learning Resources</a></li>
-                        <li><a href="{{url_for('Courses')}}">Courses</a></li>
-                        <li><a href="#.html">Information</a></li>
-                        <li><a href="#.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <div class = "section reverseDesktopDisplay">
-                     <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}" alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings" style="min-width:400px" class="resize-img"></p>
-                     <div class = "insidesection">
-                        <h2>Computing Courses</h2>
-                        <p>The College offers a range of courses to suit applicants with varying backgrounds and educational abilities. At undergraduate level, there are single BSc Honours Degree courses in Computing, Computer Networks, Software Engineering and Cyber Security with Forensics amongst others.</p>
-                        <p>The College teaches undergraduate and postgraduate courses in a wide range of specialisms, including computer science, software development, information systems, networking and software engineering. It is at the heart of a passionate computing community, including student societies devoted to games development, digital forensics and programming.</p>
-                        <p>The courses are British Computer Society accredited and are highly relevant to modern industry. They are designed to prepare students for professional occupations in Computing and related fields. Many graduates continue their studies to pursue a higher degree such as an MSc. or PhD.</p>
-                     </div>
-                
-                </div>
+{% extends "base.html" %}
 
-                <div class="section">
-                     <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}" alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings" style="min-width:400px" class="resize-img"></p>
-                    <div class = "insidesection">
-                         
-                        <h2>Design Courses</h2>
-                        <p>The College is an internationally connected creative community of diverse disciplines housed under one roof. We shape our students' futures, preparing them to shape the world through applied knowledge and creativity.</p>
-                        <p>The College's art and design courses don't just train you, they promote alternative ways of thinking, making and communicating; they provide you with space, tools and inspiration to develop your creative practice and a clear career path. You'll get expert teaching from active practitioners and researchers who will encourage you to adopt innovative and resourceful approaches that both perceive and create opportunities for better lives.</p>
-                        <p>You’ll develop your creative practice whilst interacting with your peers in well-equipped studios, making and digital workshops. At the same time, you'll learn professional skills by working on applied briefs facilitated through our links with commercial clients, cultural institutions, businesses and organisations.</p>
-                    </div>
-                </div>
-                <div class = "section">
-                    <table>
-                        
-                    </table>
-                </div>
-            </main>
-            <footer>
-                <p>153 Arundel St, Sheffield City Centre, Sheffield S1 2NU</p>
-                <p>Cantor College &copy; 2025</p>
-                
-            </footer>
-        </div>
-    </body>
-</html>
+{% block title %}Cantor College | Courses{% endblock %}
+
+{% block content %}
+<div class="section reverseDesktopDisplay">
+    <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}"
+            alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings"
+            style="min-width:400px" class="resize-img"></p>
+    <div class="insidesection">
+        <h2>Computing Courses</h2>
+        <p>The College offers a range of courses to suit applicants with varying backgrounds and educational abilities.
+            At undergraduate level, there are single BSc Honours Degree courses in Computing, Computer Networks,
+            Software Engineering and Cyber Security with Forensics amongst others.</p>
+        <p>The College teaches undergraduate and postgraduate courses in a wide range of specialisms, including computer
+            science, software development, information systems, networking and software engineering. It is at the heart
+            of a passionate computing community, including student societies devoted to games development, digital
+            forensics and programming.</p>
+        <p>The courses are British Computer Society accredited and are highly relevant to modern industry. They are
+            designed to prepare students for professional occupations in Computing and related fields. Many graduates
+            continue their studies to pursue a higher degree such as an MSc. or PhD.</p>
+    </div>
+
+</div>
+
+<div class="section">
+    <p><img src="{{url_for('static', filename = 'images/cantoroverbalcony.jpg')}}"
+            alt="The inside of Cantor College from a view over a balcony, showing numerous facilities such as computer booths and office buildings"
+            style="min-width:400px" class="resize-img"></p>
+    <div class="insidesection">
+
+        <h2>Design Courses</h2>
+        <p>The College is an internationally connected creative community of diverse disciplines housed under one roof.
+            We shape our students' futures, preparing them to shape the world through applied knowledge and creativity.
+        </p>
+        <p>The College's art and design courses don't just train you, they promote alternative ways of thinking, making
+            and communicating; they provide you with space, tools and inspiration to develop your creative practice and
+            a clear career path. You'll get expert teaching from active practitioners and researchers who will encourage
+            you to adopt innovative and resourceful approaches that both perceive and create opportunities for better
+            lives.</p>
+        <p>You’ll develop your creative practice whilst interacting with your peers in well-equipped studios, making and
+            digital workshops. At the same time, you'll learn professional skills by working on applied briefs
+            facilitated through our links with commercial clients, cultural institutions, businesses and organisations.
+        </p>
+    </div>
+</div>
+<div class="section">
+    <table>
+
+    </table>
+</div>
+{% endblock %}
