@@ -38,6 +38,16 @@ body {
 
 }
 
+.InlineButtons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.InlineButtons button{
+  margin: 10px;
+}
+
 #logo-img {
   min-width: 50px;
   height: auto;
@@ -275,15 +285,16 @@ table {
 th,
 td {
   padding: 10px 4px;
-  text-align: left;
+  text-align: center;
+  border: 1px solid black;
+}
+tr td:first-of-type 
+{
+  background-color: rgb(244,244,244);
+  font-weight: bold;
 }
 
-th {
-  text-transform: uppercase;
-  border-bottom: 4px solid #000;
-  background-color: #fff;
-}
-
+/* -- DESKTOP --*/
 @media (min-width:950px) {
   .CourseStats p{
     border-right: none;
@@ -294,6 +305,10 @@ th {
   .CourseStats{
     flex-direction: row;
   }
+  .InlineButtons{
+    flex-direction: row;
+  }
+
   nav li a:hover {
     color: #7e8aa2;
   }

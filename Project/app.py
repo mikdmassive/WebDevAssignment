@@ -39,5 +39,13 @@ def Facilities():
 def LearningResources():
     return render_template('LearningResources.html')
 
+@app.route('/Information')
+def Information():
+    return render_template('Information.html')
+    
+@app.route('/ContactUs')
+def ContactUs():
+    return render_template('ContactUs.html')
+
 if __name__ == '__main__':
       app.run(host='127.0.0.1', port=5000, debug=True)

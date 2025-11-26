@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Cantor College | Information{% endblock %}
+{% block java %}
+<script src="{{url_for('static', filename = 'js/infoButtons.js')}}" defer></script>{% endblock %}
+{% block content %}
+<div class='section' id = 'section1'>
+    <div class='insidesection'>
+        <h2>Information</h2>
+        <p>Please select who you would like to view information for using the buttons below.</p>
+        <div class = "InlineButtons">
+            <button>Staff</button>
+            <button>Students</button>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
