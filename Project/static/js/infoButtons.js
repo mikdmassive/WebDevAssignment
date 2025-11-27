@@ -88,15 +88,17 @@ function updateinfotext(typee) {
         titlethenparatbl1("Event Hosting and Sponsorship","Cantor College hosts a range of events throughout the year, including hackathons, design challenges, and technology expos. We offer businesses the opportunity to sponsor events or collaborate in their organization, giving you direct access to the brightest minds in the field and the chance to showcase your brand to our community.")
       
         addtextelement("h3","Why Partner with Cantor College?",insidesec)
-        const tb2 = addelement(insidesec,"table")
-        function titlethenparatbl2(ttle,para)
+        const ullol = addelement(insidesec,"ul")
+        ullol.classList.add("RomanNumeralsList");
+        function titlethenparalist(ttle,para)
         {
-            tableinserter(ttle,para,tb2)
+            const listitem = addelement(ullol,"li")
+            listitem.innerHTML = "<p><b>"+ttle+"</b>"+para+"</p>"
         }
-        titlethenparatbl2("Cutting-Edge Expertise:","Our programs are at the forefront of industry trends, ensuring that our services reflect the latest advancements in technology and design.")
-        titlethenparatbl2("Innovation at the Core:","We foster a culture of creativity and problem-solving, making us the ideal partner for businesses seeking innovative solutions.")
-        titlethenparatbl2("Tailored Solutions:","We understand that every business is unique. Our services are customized to meet your specific objectives and challenges.")
-        titlethenparatbl2("Future-Ready Talent:","Our students are trained to excel in the modern workplace, equipped with both theoretical knowledge and practical skills.")
+        titlethenparalist("Cutting-Edge Expertise:","Our programs are at the forefront of industry trends, ensuring that our services reflect the latest advancements in technology and design.")
+        titlethenparalist("Innovation at the Core:","We foster a culture of creativity and problem-solving, making us the ideal partner for businesses seeking innovative solutions.")
+        titlethenparalist("Tailored Solutions:","We understand that every business is unique. Our services are customized to meet your specific objectives and challenges.")
+        titlethenparalist("Future-Ready Talent:","Our students are trained to excel in the modern workplace, equipped with both theoretical knowledge and practical skills.")
         addtextelement("h3","Get in Touch",insidesec)
         addtextelement("p","Ready to explore how Cantor College can help your business grow? Contact our Business Services team today to discuss your needs and learn more about our offerings. We look forward to working with you to achieve your business goals.",insidesec)
     }

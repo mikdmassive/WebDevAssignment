@@ -266,6 +266,7 @@ button:hover {
 
 .RomanNumeralsList {
   list-style: lower-roman;
+  text-align: left;
 }
 
 .RomanNumeralsList li {
@@ -373,6 +374,9 @@ tr td:first-of-type
   }
   .DesktopImages{
     min-width: 400px;
+  }
+  .DesktopSmallerImages{
+    max-width: 400px;
   }
  
 }
