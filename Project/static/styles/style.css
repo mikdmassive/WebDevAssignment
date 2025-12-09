@@ -16,12 +16,14 @@ h2 {
 h3 {
   font-size: 24px;
 }
-.aligncenter{
+
+.aligncenter {
   text-align: center;
   justify-content: center;
   align-items: center;
   overflow: visible;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -38,13 +40,14 @@ body {
 
 }
 
-.InlineButtons{
+.InlineButtons {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-.InlineButtons button{
+
+.InlineButtons button {
   margin: 10px;
 }
 
@@ -128,33 +131,38 @@ footer {
   border-bottom: 1px solid rgb(220, 220, 220);
   padding-bottom: 10px;
 }
-.CourseStats{
+
+.CourseStats {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-.CourseStats p{
+
+.CourseStats p {
   padding-left: 10px;
   padding-right: 10px;
   border-left: 1px solid black;
-  border-right: 1px solid black;; 
+  border-right: 1px solid black;
+  ;
 }
 
-.CourseStats2{
+.CourseStats2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
 }
-.CourseStats2 p{
+
+.CourseStats2 p {
   text-decoration: rgb(43, 43, 43);
   padding-left: 5px;
   padding-right: 5px;
 
 }
+
 .CourseStats2 p:first-of-type {
-      border-right: 1px solid black;
+  border-right: 1px solid black;
 }
 
 
@@ -207,6 +215,7 @@ button {
   box-shadow: 0 0 10px #242424;
   width: 120px;
   height: 33px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -249,6 +258,7 @@ button:hover {
   animation-duration: .2s;
   width: 85%;
   margin: 7.5%;
+  cursor: pointer;
 
 }
 
@@ -289,24 +299,105 @@ td {
   text-align: center;
   border: 1px solid black;
 }
-tr td:first-of-type 
-{
-  background-color: rgb(244,244,244);
+
+tr td:first-of-type {
+  background-color: rgb(244, 244, 244);
   font-weight: bold;
 }
 
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 10px solid #F28B30;
+}
+
+/* Burger Menu Styles */
+@media (max-width:950px) {
+  nav {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+  }
+
+  nav.active {
+    max-height: 500px;
+    overflow: visible;
+  }
+
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .burger-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out;
+  }
+
+  .burger-menu span:nth-child(1) {
+    top: 0px;
+  }
+
+  .burger-menu span:nth-child(2) {
+    top: 10px;
+  }
+
+  .burger-menu span:nth-child(3) {
+    top: 20px;
+  }
+
+  .burger-menu.active span:nth-child(1) {
+    opacity: 0;
+
+    top: -30px;
+  }
+
+  .burger-menu.active span:nth-child(2) {
+    top: 10px;
+    transform: rotate(-135deg);
+
+  }
+
+  .burger-menu.active span:nth-child(3) {
+    top: 10px;
+  
+    transform: rotate(135deg);
+  }
+}
+
+/* END OF Burger Menu Styles */
+
+
 /* -- DESKTOP --*/
 @media (min-width:950px) {
-  .CourseStats p{
+  .CourseStats p {
     border-right: none;
   }
+
   .CourseStats :last-of-type {
     border-right: 1px solid black;
   }
-  .CourseStats{
+
+  .CourseStats {
     flex-direction: row;
   }
-  .InlineButtons{
+
+  .InlineButtons {
     flex-direction: row;
   }
 
@@ -316,17 +407,11 @@ tr td:first-of-type
 
   .container {
     margin: auto;
-    max-width: 1200px;
+    max-width: 1500px;
     min-width: 600px;
   }
 
-  header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 10px solid #F28B30;
-  }
+
 
   nav ul {
     padding: 0;
@@ -361,8 +446,9 @@ tr td:first-of-type
     border-radius: 0px;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     justify-content: center;
+    margin: 0 auto;
+
   }
 
   .section {
@@ -372,11 +458,13 @@ tr td:first-of-type
   .reverseDesktopDisplay {
     flex-direction: row-reverse;
   }
-  .DesktopImages{
+
+  .DesktopImages {
     min-width: 400px;
   }
-  .DesktopSmallerImages{
+
+  .DesktopSmallerImages {
     max-width: 400px;
   }
- 
+
 }
