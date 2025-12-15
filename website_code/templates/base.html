@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block description %}{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/style.css') }}" />
 
     <title>{% block title %}Cantor College{% endblock %}</title>
@@ -15,7 +16,7 @@
     <div class="container">
         <header>
             <div id="Logo">
-                <p><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Logo" style="width:100px"
+                <p><img src="{{url_for('static', filename = 'images/logo.webp')}}" alt="Logo" style="width:100px"
                         id="logo-img"onclick="location.replace('/')""></p>
 
             </div>
