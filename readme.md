@@ -24,8 +24,8 @@ https://github.com/mikdmassive/WebDevAssignment
 │ │ ├── styles
 │ ├── templates
 │ │ ├── **_ CONTAINS HTML FILES _**
-│ ├── .env
-│ ├── config,py
+│ ├── **_CREATE A FILE NAMED .ENV WITH YOUR SQL WORKBENCH DETAILS AS REQUIRED IN CONFIG.PY _**
+│ ├── config.py
 │ ├── app.py
 ├── backend
 │ ├── **_THIS IS WHERE THE VENV WOULD GO _**
@@ -34,7 +34,7 @@ https://github.com/mikdmassive/WebDevAssignment
 
 ## ARTIFICIAL INTELLIGENCE AND ACADEMIC INTEGRITY – AI & AI
 
-Please ensure you complete the AI Tranparency Statement and include it in the above. Failure to do so may be construed as Academic Misconduct.
+My statement is located in the evidence folder.
 
 ### DATABASE EVIDENCE
 
