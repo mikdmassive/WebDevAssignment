@@ -39,3 +39,12 @@ My statement is located in the evidence folder.
 ### DATABASE EVIDENCE
 
 The SQL file is contained in the databases folder inside the evidence folder
+
+## .ENV FOR MYSQL FILE GUIDE
+Place it in the website_code folder
+
+# .ENV CODE TEMPLATE
+MYSQL_HOST=localhost
+MYSQL_USER=root
+MYSQL_PASSWORD='yourpasswordhere'
+MYSQL_DB=webdevdatabase
